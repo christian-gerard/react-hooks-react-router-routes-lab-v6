@@ -1,13 +1,24 @@
-import NavBar from "./components/NavBar";
-import MovieCard from './components/MovieCard'
+
+import Home from './pages/Home'
+import Directors from './pages/Directors'
+import Actors from './pages/Actors'
+import Movie from './pages/Movie'
 const routes = [
    {
-    path: '/moviecard',
-    element: <MovieCard />
+    path: '/',
+    element: <Home />
    },
    {
-    path: '/',
-    element: <MovieCard />
+    path: '/directors',
+    element: <Directors />
+   },
+   {
+    path: '/actors',
+    element: <Actors />
+   },
+   {
+    path: `/movie/:id`,
+    element: <Movie />
    }
   ];
 

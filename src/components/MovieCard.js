@@ -1,16 +1,15 @@
 import {Link} from 'react-router-dom';
-import NavBar from './NavBar';
 
-function MovieCard({title}) {
+
+function MovieCard({ movie: {id,title,time,genres }}) {
   
+
   return (
     <> 
-    <NavBar />
+
     <article>
-        
-        <h2>{title}</h2>
-        <h1>Movie Card</h1>
-        {/* What should go here? */}
+     <h1>{title}</h1>
+     <Link to={`/movie/${id - 1}`}>View Movie</Link>
     </article>
     
     </>
