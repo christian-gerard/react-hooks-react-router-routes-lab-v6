@@ -17,7 +17,7 @@ function Home() {
 
   return (
     <>
-    <NavBar movies={movies} />
+    <NavBar />
       <header>
         <h1>Home Page</h1>
       </header>

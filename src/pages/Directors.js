@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import NavBar from '../components/NavBar'
+import NavBar from '../components/NavBar';
+import {v4 as uuidv4} from 'uuid'
 
 function Directors() {
   const [directors, setDirectors] = useState([])
@@ -12,10 +13,10 @@ function Directors() {
       const renderedDirectors = data.map((d) => (
       
       
-        <article>
+        <article key={uuidv4()}>
           <h2>{d.name}</h2>
-          <ul>
-            {d.movies.map((movie) => <li>{movie}</li>)}
+          <ul >
+            {d.movies.map((movie) => <li key={uuidv4()}>{movie}</li>)}
           </ul>
         </article>
         

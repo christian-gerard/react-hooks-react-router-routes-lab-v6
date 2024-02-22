@@ -8,8 +8,8 @@ function MovieCard({ movie: {id,title,time,genres }}) {
     <> 
 
     <article>
-     <h1>{title}</h1>
-     <Link to={`/movie/${id - 1}`}>View Movie</Link>
+     <h2>{title}</h2>
+     <Link to={`/movie/${id}`}>View Info</Link>
     </article>
     
     </>

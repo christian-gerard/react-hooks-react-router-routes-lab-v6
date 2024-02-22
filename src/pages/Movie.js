@@ -5,12 +5,13 @@ import {v4 as uuidv4} from 'uuid'
 import NavBar from '../components/NavBar'
 
 function Movie() {
-  const movieData = useParams()
+  const movieData = Number(useParams().id)
+
   const [movData, setMovData] = useState({})
   const [genres, setGenres] = useState([])
 
   useEffect(() => {
-    fetch(`http://localhost:4000/movies/${Number(movieData.id) + 1}`)
+    fetch(`http://localhost:4000/movies/${movieData}`)
     .then(resp => resp.json())
     .then(data => {
       setMovData(data);
